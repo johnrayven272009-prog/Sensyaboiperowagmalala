@@ -1,22 +1,32 @@
-// 🎵 MUSIC CONTROLS — Jeff Buckley 💛
-const bgMusic = document.getElementById('bgMusic');
-const musicBtn = document.getElementById('musicBtn');
+// 🎵 MUSIC CONTROLS
+const bgMusic = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
 
-musicBtn.addEventListener('click', function() {
+musicBtn.addEventListener("click", async function () {
     if (bgMusic.paused) {
-        bgMusic.volume = 0.25;
-        bgMusic.play();
-        this.innerText = "🎶 Playing... Jeff Buckley 💛";
+        try {
+            bgMusic.volume = 0.25;
+
+            await bgMusic.play();
+
+            this.textContent = "🎶 Playing... Jeff Buckley 💚";
+        } catch (error) {
+            console.error("Audio playback failed:", error);
+            this.textContent = "❌ Song couldn't play";
+        }
     } else {
         bgMusic.pause();
-        this.innerText = "🎵 Play: Lover, You Should've Come Over 💛";
+        this.textContent = "🎵 Play: Lover, You Should've Come Over 💚";
     }
 });
 
-// 💛 MESSAGE BUTTON
-document.getElementById('heartBtn').addEventListener('click', function() {
-    document.getElementById('response').style.display = 'block';
-    this.innerText = "💛 Thank you...";
+
+// 💚 MESSAGE BUTTON
+const heartBtn = document.getElementById("heartBtn");
+const response = document.getElementById("response");
+
+heartBtn.addEventListener("click", function () {
+    response.classList.remove("hidden");
+    this.textContent = "💚 Thank you...";
     this.disabled = true;
 });
-

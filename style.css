@@ -10,8 +10,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
-    color: #5a4a2f;
+    background: linear-gradient(135deg, #eaf7ee 0%, #d8f0df 100%);
+    color: #2f5a3a;
     padding: 20px;
     position: relative;
     overflow-x: hidden;
@@ -21,8 +21,8 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    opacity: 0.04;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='50' font-size='50' text-anchor='middle' fill='%23b8860b'%3E💛%3C/text%3E%3C/svg%3E");
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='50' font-size='50' text-anchor='middle' fill='%233f7d4f'%3E💚%3C/text%3E%3C/svg%3E");
     background-size: 80px;
     pointer-events: none;
 }
@@ -33,17 +33,24 @@ body {
     max-width: 550px;
     width: 100%;
     text-align: center;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.92);
     padding: 45px 35px;
     border-radius: 25px;
-    box-shadow: 0 10px 40px rgba(184, 134, 11, 0.12);
+    box-shadow: 0 10px 40px rgba(63, 125, 79, 0.15);
     backdrop-filter: blur(8px);
     animation: fadeIn 1.5s ease-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .heart {
@@ -53,26 +60,31 @@ body {
 }
 
 @keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 h1 {
     font-size: 2.4rem;
-    color: #b8860b;
+    color: #3f7d4f;
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
 
 .message-box {
-    background: rgba(255, 248, 225, 0.8);
+    background: rgba(235, 248, 238, 0.9);
     padding: 28px;
     border-radius: 18px;
     margin-bottom: 30px;
     line-height: 1.9;
     font-size: 1.08rem;
-    color: #5a4a2f;
-    border-left: 4px solid #f0c808;
+    color: #2f5a3a;
+    border-left: 4px solid #5aaa6b;
     text-align: left;
 }
 
@@ -81,25 +93,25 @@ button {
     font-size: 1.05rem;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(135deg, #f0c808, #e6b800);
-    color: #3d3000;
+    background: linear-gradient(135deg, #6fbd7d, #4fa961);
+    color: white;
     cursor: pointer;
     font-weight: bold;
-    box-shadow: 0 6px 20px rgba(240, 200, 8, 0.35);
+    box-shadow: 0 6px 20px rgba(70, 150, 85, 0.3);
     transition: all 0.3s ease;
     margin: 5px;
 }
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(240, 200, 8, 0.45);
+    box-shadow: 0 8px 25px rgba(70, 150, 85, 0.4);
 }
 
 .hidden {
     display: none;
     margin-top: 20px;
     font-size: 1.1rem;
-    color: #b8860b;
+    color: #3f7d4f;
     font-style: italic;
 }
 
@@ -109,4 +121,3 @@ button:hover {
     letter-spacing: 8px;
     opacity: 0.6;
 }
-
